@@ -1,0 +1,462 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-04-28 20:07:50",
+    "containerVersion": {
+        "path": "accounts/6222092204/containers/180223160/versions/41",
+        "accountId": "6222092204",
+        "containerId": "180223160",
+        "containerVersionId": "41",
+        "name": "Conversiones Mejoradas V2",
+        "container": {
+            "path": "accounts/6222092204/containers/180223160",
+            "accountId": "6222092204",
+            "containerId": "180223160",
+            "name": "yevtech.com",
+            "publicId": "GTM-PJFZ3KPR",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1710458840831",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6222092204/containers/180223160/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-PJFZ3KPR"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "tagId": "267",
+                "name": "CM-HTML-Conversion Mejorada",
+                "type": "html",
+                "notes": "⚠️ En la etiqueta `CM-Borrar Datos Local Storage` usar el mismo activador que el de la conversión\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n🚦 Es responsabilidad del implementador del uso responsable de esta etiqueta utilizando Activadores específicos de las páginas elegidas para realizar el trackeo del usuario.\n\nUn uso indebido de activadores generales podría producir una brecha de seguridad del envío de información sensible.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ndocument.addEventListener('change', function (e) {\n  var input = e.target;\n  if(input.type != 'password'){\n     dataLayer.push( {\n       event: \"input_change\",\n       yev_attributes: {\n         class: input.className,\n         id: input.id,\n         name: input.name,\n         type: input.type,\n         value: input.value\n       }\n     });\n  }\n});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1711494737223",
+                "firingTriggerId": [
+                    "52"
+                ],
+                "parentFolderId": "283",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "tagId": "276",
+                "name": "CM-Borrar Datos Local Storage",
+                "type": "cvt_180223160_274",
+                "priority": {
+                    "type": "INTEGER",
+                    "value": "-1"
+                },
+                "notes": "⚠️ Usar el mismo activador que el de la conversión",
+                "fingerprint": "1711494691259",
+                "parentFolderId": "283",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "triggerId": "52",
+                "name": "CM-WL-Principal Conversion Mejorada",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1710786316010",
+                "parentFolderId": "283"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "268",
+                "name": "CM-Attributes",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes"
+                    }
+                ],
+                "fingerprint": "1710717105231",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "269",
+                "name": "CM-2🙋🏻‍♂️-User Data",
+                "type": "awec",
+                "notes": "⚠️ En la etiqueta `CM-Borrar Datos Local Storage` usar el mismo activador que el de la conversión",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "mode",
+                        "value": "CODE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "dataSource",
+                        "value": "{{CM-1⚙️-Collect User Data by Input}}"
+                    }
+                ],
+                "fingerprint": "1711494765411",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "277",
+                "name": "CM-1⚙️-Collect User Data by Input",
+                "type": "cvt_180223160_270",
+                "notes": "⚠️ En la etiqueta `CM-Borrar Datos Local Storage` usar el mismo activador que el de la conversión",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "attributes",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type_user_data",
+                                        "value": "first_name"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "class",
+                                        "value": "wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "nombre"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type",
+                                        "value": "text"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type_user_data",
+                                        "value": "phone_number"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "class",
+                                        "value": "wpcf7-form-control wpcf7-tel"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "telefono"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type",
+                                        "value": "tel"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type_user_data",
+                                        "value": "email"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "class"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "type"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "prefix_phone",
+                        "value": "+34"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "values_attributes_datalayer",
+                        "value": "{{CM-Attributes}}"
+                    }
+                ],
+                "fingerprint": "1711572780466",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "278",
+                "name": "CM-Attributes-ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes.id"
+                    }
+                ],
+                "fingerprint": "1710717105232",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "279",
+                "name": "CM-Attributes-Clase",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes.class"
+                    }
+                ],
+                "fingerprint": "1710717105232",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "280",
+                "name": "CM-Attributes-Nombre",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes.name"
+                    }
+                ],
+                "fingerprint": "1710717105233",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "281",
+                "name": "CM-Attributes-Tipo",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes.type"
+                    }
+                ],
+                "fingerprint": "1710717105233",
+                "parentFolderId": "283",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "variableId": "282",
+                "name": "CM-Attributes-Valor",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "yev_attributes.value"
+                    }
+                ],
+                "fingerprint": "1710717105234",
+                "parentFolderId": "283",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "folderId": "283",
+                "name": "Conversiones Mejoradas",
+                "fingerprint": "1710717104193"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            }
+        ],
+        "fingerprint": "1711572813967",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6222092204/containers/180223160/versions/41?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "templateId": "270",
+                "name": "Datos de Input para Conversion Mejorada",
+                "fingerprint": "1711489983396",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Datos de Input para Conversion Mejorada\",\n  \"description\": \"\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"PARAM_TABLE\",\n    \"name\": \"attributes\",\n    \"displayName\": \"Datos de Usuario\",\n    \"paramTableColumns\": [\n      {\n        \"param\": {\n          \"type\": \"SELECT\",\n          \"name\": \"type_user_data\",\n          \"displayName\": \"Tipo de Dato\",\n          \"macrosInSelect\": false,\n          \"selectItems\": [\n            {\n              \"value\": \"email\",\n              \"displayValue\": \"Email\"\n            },\n            {\n              \"value\": \"phone_number\",\n              \"displayValue\": \"Teléfono\"\n            },\n            {\n              \"value\": \"first_name\",\n              \"displayValue\": \"Nombre\"\n            },\n            {\n              \"value\": \"last_name\",\n              \"displayValue\": \"Apellidos\"\n            },\n            {\n              \"value\": \"street\",\n              \"displayValue\": \"Calle\"\n            },\n            {\n              \"value\": \"city\",\n              \"displayValue\": \"Ciudad\"\n            },\n            {\n              \"value\": \"region\",\n              \"displayValue\": \"Región\"\n            },\n            {\n              \"value\": \"country\",\n              \"displayValue\": \"País\"\n            },\n            {\n              \"value\": \"postal_code\",\n              \"displayValue\": \"Código Postal\"\n            }\n          ],\n          \"simpleValueType\": true\n        },\n        \"isUnique\": true\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"class\",\n          \"displayName\": \"Clase - class\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"id\",\n          \"displayName\": \"ID - id\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"name\",\n          \"displayName\": \"Nombre - name\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"type\",\n          \"displayName\": \"Tipo - type\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ]\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"prefix_phone\",\n    \"displayName\": \"Prefijo del Teléfono (ej: +34)\",\n    \"simpleValueType\": true\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"values_attributes_datalayer\",\n    \"displayName\": \"Atributos del Campo\",\n    \"macrosInSelect\": true,\n    \"selectItems\": [],\n    \"simpleValueType\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\n// ============================== Comprueba si vale la pena ejecutar algo ==========================\n// const log = require('logToConsole');\nconst localStorage = require('localStorage');\nconst fromBase64 = require('fromBase64');\nconst getTime = require('getTimestampMillis');\nconst toNumber = require('makeNumber');\nconst JSON = require('JSON');\n\nconst dataKey = 'd708c13c9401028fb68c97967ec676a14e1e30290c436cf5524fd63d'; // La clave bajo la cual se almacenarán los datos del usuario en localStorage\nconst encryptedData= localStorage.getItem(dataKey);\nconst timeKey = 'ygcWK7sehIY3VbAIh8OdAA';\nlet userData = {};\n\n// Verifica si el dato con TTL ha expirado\nfunction hasExpired(expiryTime) {return getTime() > expiryTime;}\n\n// Elimina datos expirados de localStorage\nfunction clearExpiredData() {\n    localStorage.removeItem(dataKey);\n    localStorage.removeItem(timeKey);\n}\n\n// Obtiene un elemento de localStorage y verifica si ha expirado\nfunction getItemWithTTL(data, time, expiry) {\n  const expiryTime = toNumber(localStorage.getItem(time)) + expiry;\n  const now = getTime();\n  if (hasExpired(expiryTime)) {\n    clearExpiredData();\n    return true;\n  }\n}\n\nif (!encryptedData) {\n  if(!data.values_attributes_datalayer) return undefined; // Si no hay datos encriptados ni dataLayer termina\n  // Si no hay datos encriptados pero sí datalayer ve al código principal\n} else {\n  // Si hay datos encriptado pero no hay dataLayer\n  if(!data.values_attributes_datalayer) {\n    // Vemos a ver si hay que borrarlos\n    if(getItemWithTTL(dataKey, timeKey, 3600000)) return undefined;\n    // Si no devolvemos los datos del usuario\n    userData = JSON.parse(fromBase64(encryptedData));\n    return userData;\n  }\n  // Si hay datos encriptados y DataLayer recogemos los datos encriptados para usarlos en el código principal\n  userData = JSON.parse(fromBase64(encryptedData));\n}\n\n\n// ====================================== Ejecución Principal ======================================\n\n// ---------------------------------Asignación de módulos necesarios--------------------------------\n\nconst toBase64 = require('toBase64');\n\n// ------------------------------------- Asignación de variables ----------------------------------\n\nconst mainTypeData = ['email', 'phone_number'];\nlet feedbackNoDataAttributes; // En caso de no encontrar atributos\nlet dataModified = false; // Bandera para saber si se modificó userData\n// ------------------------------------- Funciones  auxiliares ------------------------------------\n\n// Función para verificar si todos los atributos relevantes están vacíos\nfunction allAttributesEmpty(attribute) {\n  return !(attribute.id || attribute.class || attribute.name || attribute.type);\n}\n\n// Función para comprobar si un atributo coincide con el dato correspondiente\nfunction matchesAttribute(attribute, dataAttribute) { return !attribute || attribute === dataAttribute; }\n\n// Función para si alguno de los atributos asignados por el usuario coinciden con los del datalayer\nfunction matchesDataLayer(attribute, values) {\n  return matchesAttribute(attribute.id, values.id) && contains(attribute.class, values.class) &&\n    matchesAttribute(attribute.name, values.name) && matchesAttribute(attribute.type, values.type);\n}\n\n// Función para determinar si una cadena contiene una subcadena\nfunction contains(subcadena, cadena) { return cadena.indexOf(subcadena) !== -1; }\n\nfunction encryptData(data) { return toBase64(JSON.stringify(data)); }\n\nfunction assignUserData(userData, attribute, value) {\n  // Decide si asignar el valor directamente en userData o dentro de userData.address\n  if (mainTypeData.indexOf(attribute.type_user_data) !== -1) {\n    // Comprueba si el tipo de dato es \"telefono\" para añadir el prefijo \"+34\"\n    if (attribute.type_user_data === 'phone_number' && value.substring(0, 3) !== '+34') {\n      value = data.prefix_phone + value; // Añade el prefijo al valor\n    }\n    userData[attribute.type_user_data] = value;\n  } else {\n    // Asegura que userData.address exista antes de asignar el valor\n    userData.address = userData.address || {};\n    userData.address[attribute.type_user_data] = value;\n  }\n}\n\n// ------------------------------------ Eventos Principales ------------------------------------\n\n// Intenta recuperar y desencriptar los datos del usuario una sola vez, al inicio\n\n\n// Itera a través de los atributos para encontrar coincidencias y asignar valores\nfor (const attribute of data.attributes) {\n  // Comprueba si las cuatro columnas del atributo están vacías\n  if (allAttributesEmpty(attribute)) {\n    feedbackNoDataAttributes = 'No hay ningún identificador seleccionado en los atributos del tipo dato ' + attribute.type_user_data;\n    break; // Sale del bucle si no hay identificadores seleccionados\n  }\n\n  // Verifica coincidencias entre los atributos dados y los atributos en el dataLayer\n  if (matchesDataLayer(attribute, data.values_attributes_datalayer)) {\n    assignUserData(userData, attribute, data.values_attributes_datalayer.value);\n    dataModified = true; // Marca que se han realizado cambios en userData\n    break; // Sale del bucle después de asignar los datos\n  }\n}\n\n// Si userData fue modificado, encriptar y guardar una sola vez al final\nif (dataModified) { \n  localStorage.setItem(dataKey, encryptData(userData)); \n  localStorage.setItem(timeKey, getTime());\n}\n\n// Devuelve el feedback o los datos finales del usuario\nreturn feedbackNoDataAttributes || userData;\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_local_storage\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"d708c13c9401028fb68c97967ec676a14e1e30290c436cf5524fd63d\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"ygcWK7sehIY3VbAIh8OdAA\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: No data\n  code: |-\n    const localStorage = require('localStorage');\n    const dataKey = 'd708c13c9401028fb68c97967ec676a14e1e30290c436cf5524fd63d';\n    localStorage.removeItem(dataKey);\n\n    mockData.values_attributes_datalayer = undefined;\n      mockData.attributes = [{\n       \"type_user_data\":\"first_name\",\n       \"class\":\"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        \"id\":\"\",\n       \"name\":\"nombre\",\n       \"type\":\"text\"\n      }];\n\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo(undefined);\n- name: Base Test\n  code: |-\n    mockData.values_attributes_datalayer = {\n        class: \"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        id: \"\",\n        name: \"nombre\",\n        type: \"text\",\n        value: \"prueba1\"\n      };\n      mockData.attributes = [{\n       \"type_user_data\":\"first_name\",\n       \"class\":\"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        \"id\":\"\",\n       \"name\":\"nombre\",\n       \"type\":\"text\"\n      }];\n\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo({\"address\":{\"first_name\":\"prueba1\"}});\n- name: Change Same Data Type\n  code: |-\n    mockData.values_attributes_datalayer = {\n        class: \"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        id: \"\",\n        name: \"nombre\",\n        type: \"text\",\n        value: \"prueba2\"\n      };\n      mockData.attributes = [{\n       \"type_user_data\":\"first_name\",\n       \"id\":\"\",\n       \"class\":\"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n       \"name\":\"nombre\",\n       \"type\":\"text\"\n      }];\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo({\"address\":{\"first_name\":\"prueba2\"}});\n- name: Limited Class to Use Contains Function\n  code: |-\n    mockData.values_attributes_datalayer = {\n        class: \"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        id: \"\",\n        name: \"email\",\n        type: \"email\",\n        value: \"prueba3\"\n      };\n      mockData.attributes = [{\n       \"type_user_data\":\"email\",\n       \"class\":\"wpcf7-form-control wpcf7-text\",\n       \"id\":\"\",\n       \"name\":\"email\",\n       \"type\":\"email\"\n      }];\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo({\"email\":\"prueba3\",\"address\":{\"first_name\":\"prueba2\"}});\n- name: Empty Attributes Values\n  code: |-\n    mockData.values_attributes_datalayer = {\n        class: \"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        id: \"\",\n        name: \"otro\",\n        type: \"email\",\n        value: \"prueba3\"\n      };\n      mockData.attributes = [{\n       \"type_user_data\":\"email\",\n       \"class\":\"wpcf7-form-control wpcf7-text\",\n       \"id\":\"\",\n       \"name\":\"email\",\n       \"type\":\"email\"\n      },\n      {\n       \"type_user_data\":\"telefono\",\n       \"class\":\"\",\n       \"id\":\"\",\n       \"name\":\"\",\n       \"type\":\"\"\n      }];\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo(\"No hay ningún identificador seleccionado en los atributos del tipo dato telefono\");\n- name: Phone Number with +34 Prefix\n  code: |-\n    mockData.values_attributes_datalayer = {\n        class: \"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n        id: \"\",\n        name: \"phone\",\n        type: \"phone\",\n        value: \"600700800\"\n      };\n      mockData.attributes = [{\n       \"type_user_data\":\"phone_number\",\n       \"class\":\"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n       \"id\":\"\",\n       \"name\":\"phone\",\n       \"type\":\"phone\"\n      }];\n      mockData.prefix_phone = '+34';\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo({\"address\":{\"first_name\":\"prueba2\"},\"email\":\"prueba3\",\"phone_number\":\"+34600700800\"});\n- name: Without Datalayer Info\n  code: |-\n    mockData.values_attributes_datalayer = undefined;\n      mockData.attributes = [{\n       \"type_user_data\":\"phone_number\",\n       \"class\":\"wpcf7-form-control wpcf7-text wpcf7-validates-as-required\",\n       \"id\":\"\",\n       \"name\":\"phone\",\n       \"type\":\"phone\"\n      }];\n      mockData.prefix_phone = '+34';\n    // Call runCode to run the template's code.\n    let variableResult = runCode(mockData);\n\n    // Verify that the variable returns a result.\n    assertThat(variableResult).isEqualTo({\"address\":{\"first_name\":\"prueba2\"},\"email\":\"prueba3\",\"phone_number\":\"+34600700800\"});\nsetup: |-\n  // Recuerda tener el localstorage vacio al principio\n  const mockData = {};\n\n\n___NOTES___\n\n\n\n\n"
+            },
+            {
+                "accountId": "6222092204",
+                "containerId": "180223160",
+                "templateId": "274",
+                "name": "Borrar Datos Local Storage",
+                "fingerprint": "1711492890427",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Borrar Datos Local Storage\",\n  \"brand\": {\n    \"id\": \"brand_dummy\",\n    \"displayName\": \"\",\n    \"thumbnail\": \"data:image/jpeg;base64,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\\u003d\"\n  },\n  \"description\": \"\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\n//const log = require('logToConsole');\nconst localStorage = require('localStorage');\n\n// Clave que quieres verificar y remover del localStorage\nconst key = 'd708c13c9401028fb68c97967ec676a14e1e30290c436cf5524fd63d';\n\n// Verifica si la clave existe en localStorage\nif (localStorage.getItem(key) !== null) {\n  // Si existe, elimina el elemento\n  localStorage.removeItem(key);\n}\n\n\n// Ejecute data.gtmOnSuccess cuando la etiqueta haya finalizado.\ndata.gtmOnSuccess();\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_local_storage\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"d708c13c9401028fb68c97967ec676a14e1e30290c436cf5524fd63d\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\n\n\n\n"
+            }
+        ]
+    }
+}
