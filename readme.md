@@ -2,8 +2,8 @@
 
 ## Seguir el tutorial para configurarlo:
 [![¿Cómo Implementar las Conversiones Mejoradas de Google Ads?](https://img.youtube.com/vi/qW1DyKJFU8k/0.jpg)](https://youtu.be/qW1DyKJFU8k?feature=shared)
-1. Descargar Plantilla desde Administrador > Importar Contenedor
-2. Importar Plantilla
+1. Descargar Plantilla
+2. Importar Plantilla desde Administrador > Importar Contenedor
 3. Configurar Campos de la Plantilla
 4. Creación Etiqueta Google Ads
 6. Implementar User-Data en la etiqueta de Google Ads
