@@ -1,12 +1,11 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2024-04-28 20:07:50",
+    "exportTime": "2024-05-04 11:34:19",
     "containerVersion": {
-        "path": "accounts/6222092204/containers/180223160/versions/41",
+        "path": "accounts/6222092204/containers/180223160/versions/0",
         "accountId": "6222092204",
         "containerId": "180223160",
-        "containerVersionId": "41",
-        "name": "Conversiones Mejoradas V2",
+        "containerVersionId": "0",
         "container": {
             "path": "accounts/6222092204/containers/180223160",
             "accountId": "6222092204",
@@ -100,24 +99,7 @@
                 "triggerId": "52",
                 "name": "CM-WL-Principal Conversion Mejorada",
                 "type": "WINDOW_LOADED",
-                "filter": [
-                    {
-                        "type": "CONTAINS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{Page Path}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
-                                "value": "/"
-                            }
-                        ]
-                    }
-                ],
-                "fingerprint": "1710786316010",
+                "fingerprint": "1714822310731",
                 "parentFolderId": "283"
             }
         ],
@@ -438,8 +420,8 @@
                 "name": "Page Path"
             }
         ],
-        "fingerprint": "1711572813967",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6222092204/containers/180223160/versions/41?apiLink=version",
+        "fingerprint": "1714822459743",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6222092204/containers/180223160/versions/0?apiLink=version",
         "customTemplate": [
             {
                 "accountId": "6222092204",
